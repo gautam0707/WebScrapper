@@ -1,0 +1,84 @@
+<div *ngIf="partyInfo">
+    <div>
+        <h3 style="color:blue">
+            {{partyInfo.PartyName}} Information:
+        </h3>
+        <hr>
+        <table class="table table-hover">
+            <tr>
+                <td><b>Party Name</b></td>
+                <td>{{partyInfo.PartyName}}</td>
+            </tr>
+            <tr>
+                <td><b>Founded</b></td>
+                <td>{{partyInfo.Founded}}</td>
+            </tr>
+            <tr>
+                <td><b>Founder</b></td>
+                <td>{{partyInfo.Founder}}</td>
+            </tr>
+            <tr>
+                <td><b>Registered Year</b></td>
+                <td>{{partyInfo.RegisteredYear}}</td>
+            </tr>
+            <tr>
+                <td><b>State Office</b></td>
+                <td>{{partyInfo.StateOffice}}</td>
+            </tr>
+            <tr>
+                <td><b>States Registered</b></td>
+                <td>
+                    <tr *ngFor="let state of partyInfo.StatesRegistered">{{state}}
+                    </tr>
+                </td>
+            </tr>
+            <tr>
+                <td><b>Party Color</b></td>
+                <td>{{partyInfo.PartyColor}}</td>
+            </tr>
+            <tr>
+                <td><b>Party Symbol</b></td>
+                <td>{{partyInfo.PartySymbol}}</td>
+            </tr>
+            <tr>
+                <td><b>Is National Party?</b></td>
+                <td>{{partyInfo.NationalParty}}</td>
+            </tr>
+            <tr>
+                <td><b>Party Chief</b></td>
+                <td>{{partyInfo.PartyChief}}</td>
+            </tr>
+            <tr>
+                <td><b>State Chief</b></td>
+                <td>{{partyInfo.StateChief}}</td>
+            </tr>
+            <tr>
+                <td><b>Central Level Party Alliance Group</b></td>
+                <td>{{partyInfo.CentralLevelPartyAllianceGroup}}</td>
+            </tr>
+            <tr>
+                <td><b>Party Official Website</b></td>
+                <td>{{partyInfo.PartyWebsite}}</td>
+            </tr>
+            <tr>
+                <td><b>Twitter Address</b></td>
+                <td>{{partyInfo.TwitterAddress}}</td>
+            </tr>
+            <tr>
+                <td><b>Facebook Link</b></td>
+                <td>{{partyInfo.FacebookLink}}</td>
+            </tr>
+            <tr>
+                <td><b>Wiki Link</b></td>
+                <td>{{partyInfo.WikiLink}}</td>
+            </tr>
+        </table>
+    </div>
+    <hr>
+    <h3 style="color:blue">
+        Related news to {{partyInfo.PartyName}}
+    </h3>
+    <hr>
+    <app-related-news-item [tagId]='partyInfo.PartyId'>
+    </app-related-news-item>
+</div>

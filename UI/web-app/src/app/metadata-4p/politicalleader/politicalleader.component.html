@@ -1,0 +1,120 @@
+<div *ngIf="leaderInfo">
+    <div>
+        <h3 style="color:blue">
+            {{leaderInfo.PersonName}} Information:
+            </h3>
+        <table border="1" class="table table-hover">
+            <tr>
+                <td><b>Person Name</b></td>
+                <td>{{leaderInfo.PersonName}}</td>
+            </tr>
+            <tr>
+                <td><b>Date of Birth</b></td>
+                <td>{{leaderInfo.DateOfBirth}}</td>
+            </tr>
+            <tr>
+                <td><b>Death Date</b></td>
+                <td>{{leaderInfo.DeathDate}}</td>
+            </tr>
+            <tr>
+                <td><b>Place of Birth</b></td>
+                <td>{{leaderInfo.PlaceOfBirth}}</td>
+            </tr>
+            <tr>
+                <td><b>Spouse Name</b></td>
+                <td>{{leaderInfo.SpouseName}}</td>
+            </tr>
+            <tr>
+                <td><b>Children</b></td>
+                <td>{{leaderInfo.Children}}</td>
+            </tr>
+            <tr>
+                <td><b>Address</b></td>
+                <td>{{leaderInfo.Address}}</td>
+            </tr>
+            <tr>
+                <td><b>Educational Qualifications</b></td>
+                <td>{{leaderInfo.EducationalQualifications}}</td>
+            </tr>
+            <tr>
+                <td><b>Religion</b></td>
+                <td>{{leaderInfo.Religion}}</td>
+            </tr>
+            <tr>
+                <td><b>Caste</b></td>
+                <td>{{leaderInfo.Caste}}</td>
+            </tr>
+            <tr>
+                <td><b>Achievements</b></td>
+                <td>{{leaderInfo.Achievements}}</td>
+            </tr>
+            <tr>
+                <td><b>Awards</b></td>
+                <td>{{leaderInfo.Awards}}</td>
+            </tr>
+            <tr>
+                <td><b>Political Journey</b></td>
+                <td>{{leaderInfo.PoliticalJourney}}</td>
+            </tr>
+            <tr>
+                <td><b>Ministry Held</b></td>
+                <td>{{leaderInfo.MinistryHeld}}</td>
+            </tr>
+            <tr>
+                <td><b>Criminal Cases and Details</b></td>
+                <td>{{leaderInfo.CriminalCasesAndDetails}}</td>
+            </tr>
+            <tr>
+                <td><b>Past Judgements</b></td>
+                <td>{{leaderInfo.PastJudgements}}</td>
+            </tr>
+            <tr>
+                <td><b>Property Declarations</b></td>
+                <td>{{leaderInfo.PropertyDeclarations}}</td>
+            </tr>
+            <tr>
+                <td><b>Income By Year</b></td>
+                <td>{{leaderInfo.IncomeByYear}}</td>
+            </tr>             
+            <tr>
+                <td><b>Industrial Backgroud Details</b></td>
+                <td>{{leaderInfo.IndustrialBackgroundDetails}}</td>
+            </tr>
+            <tr>
+                <td><b>Occupation</b></td>
+                <td>{{leaderInfo.Occupation}}</td>
+            </tr>
+            <tr>
+                <td><b>Professional Details</b></td>
+                <td>{{leaderInfo.ProfessionalDetails}}</td>
+            </tr>
+            <tr>
+                <td><b>Political Party Level Positions Held</b></td>
+                <td>{{leaderInfo.PoliticalPartyLevelPositionsHeld}}</td>
+            </tr>
+            <tr>
+                <td><b>Website</b></td>
+                <td>{{leaderInfo.Website}}</td>
+            </tr>
+            <tr>
+                <td><b>Twitter Address</b></td>
+                <td>{{leaderInfo.TwitterAddress}}</td>
+            </tr>
+            <tr>
+                <td><b>Facebook Link</b></td>
+                <td>{{leaderInfo.FacebookLink}}</td>
+            </tr>
+            <tr>
+                <td><b>Wiki Link</b></td>
+                <td>{{leaderInfo.WikiLink}}</td>
+            </tr>
+        </table>
+    </div>
+    <hr>
+    <h3 style="color:blue">
+        Related news to {{leaderInfo.PersonName}}
+    </h3>
+    <hr>
+    <app-related-news-item [tagId]='leaderInfo.LeaderId'>
+    </app-related-news-item>
+</div>

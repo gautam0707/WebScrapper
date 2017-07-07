@@ -1,0 +1,17 @@
+<div id="newscount" class="pull-right">News Count: <span class="badge">{{newsCount}}</span></div>
+<div id="newslist" *ngFor="let newsItem of newsPresented">
+    <div id='heading-section' align="center" [innerHtml]='newsItem.heading'></div>
+    <div id='images'>
+        <table>
+                <tr>
+                    <td *ngFor='let imageurl of newsItem.imageurls'>
+                        <img src='{{imageurl}}' height='150' width='150'>
+                    </td>
+                </tr>
+            </table>
+    </div>
+    <div id='news-section' [innerHtml]='newsItem.newsItem'></div>
+    <br>
+    <br>
+    <hr>
+</div>
